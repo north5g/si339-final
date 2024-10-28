@@ -24,6 +24,10 @@ a[href="#main"] {
     display: none;
 }
 
+.skip-link:focus {
+    transform: translateY(0);
+}
+
 /* INDEX */
 .meets-list {
     padding: 1.5em;
