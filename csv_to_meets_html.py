@@ -33,7 +33,7 @@ def csv_to_html(csv_filename, output_folder):
 <link rel="stylesheet" href="../css/style.css">
 </head>
    <body>
-   <a href = "#main">Skip to Main Content</a>
+   <a href = "#main" class="skip-link">Skip to Main Content</a>
    <nav class="main-nav">
      <ul>
         <li><a href="../index.html">Home Page</a></li>
@@ -121,6 +121,13 @@ def csv_to_html(csv_filename, output_folder):
         <input type="radio" name="carousel" id="slide3">
         <input type="radio" name="carousel" id="slide4">
         <input type="radio" name="carousel" id="slide5">
+        <div class="carousel-navigation">
+            <label for="slide1">Slide 1</label>
+            <label for="slide2">Slide 2</label>
+            <label for="slide3">Slide 3</label>
+            <label for="slide4">Slide 4</label>
+            <label for="slide5">Slide 5</label>
+        </div>
         <div class="carousel-slides">
         """
 
