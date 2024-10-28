@@ -21,7 +21,7 @@ h3 {
 }
 
 a[href="#main"] {
-    display: none;
+    display: hidden;
 }
 
 .skip-link:focus {
