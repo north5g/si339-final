@@ -329,6 +329,12 @@ input[type="radio"] {
     :root {
         --bg-color: #000;
         --text-color: #fff;
+        --nav-bg: #2c3e50;
+        --nav-hover: #34495e;
+        --info-bg: #34495e;
+        --card-bg: #2c3e50;
+        --card-border: #34495e;
+        --link-hover: #a0bfd3;
     }
 }
 

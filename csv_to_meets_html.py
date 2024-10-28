@@ -48,7 +48,7 @@ def csv_to_html(csv_filename, output_folder):
         <h1><a href="{link_url}">{link_text}</a></h1>
         <h2>{h2_text}</h2>
 </header>
-   <main id = "main">
+   <main class="main" id = "main">
 
 
     <section class="summary" id = "summary">
