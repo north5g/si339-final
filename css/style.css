@@ -153,7 +153,7 @@ table tr:nth-child(even) {
 }
 
 .athlete-segment:nth-child(even) {
-    background-color: #14b055;
+    background-color: #69dd99;
 }
 
 .athlete-segment:nth-child(odd) {
@@ -301,7 +301,7 @@ input[type="radio"] {
     :root {
         --bg-color: #1c1c1c;
         --text-color: #b9bfc0;
-        --highlight-color: #27ae60;
+        --highlight-color: #69dd99;
         --nav-bg: #2c3e50;
         --nav-hover: #34495e;
         --info-bg: #34495e;
@@ -322,23 +322,7 @@ html {
     scroll-behavior: smooth;
 }
 
-.fab {
-    position: fixed;
-    bottom: 1em;
-    right: 1em;
-    background-color: #27ae60;
-    color: white;
-    border: none;
-    padding: 15px;
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
 
-.fab:hover {
-    background-color: #229954;
-}
 
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
@@ -346,19 +330,35 @@ html {
         transition: none !important;
     }
 
-    .progress-bar div {
-        animation: none;
-    }
-
     .carousel-slides {
         animation: none;
     }
 
-    .collapsible, .fab, .meets-list li {
-        transition: background-color 0.01s ease;
+    .athlete-segment img:hover {
+        transform: none;
+    }
+
+    .carousel-slide img:hover {
+        transform:none;
     }
 
     .meets-list li:hover {
         transform: none;
+    }
+
+    .carousel-slides {
+        animation: none;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    .carousel-slide {
+        display: block;
+        width: 100%;
+    }
+
+    .carousel-slide img {
+        width: 100%;
     }
 }
