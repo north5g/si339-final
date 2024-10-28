@@ -40,7 +40,7 @@ a[href="#main"] {
 }
 
 .meets-list ul li {
-    background-color: var(--card-bg, #4fccd5);
+    background-color: var(--card-bg, #b3eef2);
     border: 1px solid var(--card-border, #16283a);
     border-radius: 32px;
     transition: transform 0.2s ease, background-color 0.3s ease;
@@ -66,7 +66,7 @@ a[href="#main"] {
     display: grid;
     grid-template-columns: repeat(1, 3fr); 
     grid-template-rows: auto;
-    background-color: var(--nav-bg, #5fc7cf);
+    background-color: var(--nav-bg, #99d4d8);
     padding: 0.2em;
     list-style: none;
     gap: 0.2em;
@@ -145,7 +145,7 @@ table th, table td {
 }
 
 table tr:nth-child(even) {
-    background-color: #5fc7cf;
+    background-color: #99d4d8;
 }
 
 .athlete-segment:nth-child(even) {
@@ -153,7 +153,7 @@ table tr:nth-child(even) {
 }
 
 .athlete-segment:nth-child(odd) {
-    background-color: #5fc7cf;
+    background-color: #99d4d8;
 }
 
 .athlete-segment {
