@@ -8,7 +8,6 @@ body {
     line-height: 1.6;
 }
 
-/* Responsive font sizes using clamp() */
 h1, h2 {
     font-size: 2em;
     margin-bottom: 1rem;
@@ -65,8 +64,8 @@ a[href="#main"] {
 /* MEETS */
 .main-nav ul {
     display: grid;
-    grid-template-columns: repeat(1, 3fr); /* 3 equal columns */
-    grid-template-rows: auto auto; /* 2 rows */
+    grid-template-columns: repeat(1, 3fr); 
+    grid-template-rows: auto;
     background-color: var(--nav-bg, #5fc7cf);
     padding: 0.2em;
     list-style: none;
@@ -227,46 +226,10 @@ table th {
     color: white;
 }
 
-.collapsible {
-    background-color: #ecf0f1;
-    color: #2c3e50;
-    cursor: pointer;
-    padding: 1em;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 1.2rem;
-    transition: background-color 0.3s ease;
-}
-
-.collapsible:hover {
-    background-color: #bdc3c7;
-}
-
-.collapsible.active, .collapsible:focus {
-    background-color: #d5dbdb;
-}
-
 .content {
     padding: 0 18px;
     display: none;
     overflow: hidden;
-}
-
-.progress-bar {
-    width: 100%;
-    background-color: #ecf0f1;
-    border-radius: 25px;
-    overflow: hidden;
-}
-
-.progress-bar div {
-    height: 20px;
-    width: 50%;
-    background-color: #27ae60;
-    border-radius: 25px;
-    animation: progress-animation 2s ease-in-out;
 }
 
 #gallery {
@@ -323,32 +286,6 @@ input[type="radio"] {
   .carousel-slides {
     animation: slideAnimation 25s infinite;
   }
-  
-  /* Manual controls for the radio buttons */
-  .carousel-controls {
-    margin-top: 15px;
-  }
-
-.carousel-controls label {
-    width: 10px;
-    height: 10px;
-    background-color: #888;
-    border-radius: 50%;
-    display: inline-block;
-    margin: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-input#slide1:checked~.carousel-slides { transform: translateX(0%); }
-input#slide2:checked~.carousel-slides { transform: translateX(-20%); }
-input#slide3:checked~.carousel-slides { transform: translateX(-40%); }
-input#slide4:checked~.carousel-slides { transform: translateX(-60%); }
-input#slide5:checked~.carousel-slides { transform: translateX(-80%); }
-
-.carousel-controls label:hover {
-    background-color: #555;
-}
 
 :root {
     --bg-color: #f5f5f5;
