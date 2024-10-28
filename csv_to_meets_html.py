@@ -104,7 +104,7 @@ def csv_to_html(csv_filename, output_folder):
 <div class="athlete-info">
     <h3>{name}</h3>
     <dl>
-        <dt>Place</dt><dd>{place}</dd>
+        <dt>Place</dt><dd>{place[:-1]}</dd>
         <dt>Time</dt><dd>{time}</dd>
         <dt>Grade</dt><dd>{grade}</dd>
     </dl>

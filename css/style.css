@@ -65,13 +65,27 @@ a[href="#main"] {
 /* MEETS */
 .main-nav ul {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    grid-template-rows: auto auto; /* 2 rows */
     background-color: var(--nav-bg, #5fc7cf);
     padding: 0.5em;
     list-style: none;
     gap: 0.75em;
     justify-content: center;
 }
+
+.main-nav ul {
+    display: grid;
+    grid-template-columns: repeat(1, 3fr); /* 3 equal columns */
+    grid-template-rows: auto auto; /* 2 rows */
+    background-color: var(--nav-bg, #5fc7cf);
+    padding: 0.2em;
+    list-style: none;
+    gap: 0.2em;
+    justify-content: center;
+    align-items: center;
+}
+
 
 .main-nav ul li {
     display: flex;
@@ -123,11 +137,17 @@ a[href="#main"] {
     font-weight: bold;
 }
 
+.summary p{
+    text-align: justify;
+    padding: 0.2em 1em;
+}
+
 /* Table Styling */
 table {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
+    padding: 0.2em 1em;
 }
 
 table th, table td {
@@ -137,7 +157,7 @@ table th, table td {
 }
 
 table tr:nth-child(even) {
-    background-color: #d4ecf3;
+    background-color: #5fc7cf;
 }
 
 .athlete-segment:nth-child(even) {
@@ -158,6 +178,8 @@ table tr:nth-child(even) {
     border-radius: 8px;
     box-sizing: border-box;
     gap: 1em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
 }
 
 .athlete-segment figure {
@@ -171,6 +193,10 @@ table tr:nth-child(even) {
     width: 70%;
     height: auto;
     border-radius: 20%;
+    transition: transform 0.5s ease;
+}
+.athlete-segment img:hover {
+    transform: scale(1.15);
 }
 
 .athlete-info {
@@ -255,6 +281,7 @@ table th {
 }
 
 #gallery {
+    padding: 0;
     text-align: center;
     overflow: hidden;
 }
@@ -350,7 +377,7 @@ input#slide5:checked~.carousel-slides { transform: translateX(-80%); }
         --info-bg: #34495e;
         --card-bg: #2c3e50;
         --card-border: #34495e;
-        --link-hover: #bdc3c7;
+        --link-hover: #a0bfd3;
     }
 }
 
