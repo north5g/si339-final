@@ -312,6 +312,13 @@ input[type="radio"] {
     table tr:nth-child(even) {
         background-color: #0b5773;
     }
+    .athlete-segment:nth-child(even) {
+        background-color: #107c3d;
+    }
+    
+    .athlete-segment:nth-child(odd) {
+        background-color: #225d61;
+    }
 }
 
 @media (prefers-contrast: high) {
