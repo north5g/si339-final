@@ -29,7 +29,7 @@ def csv_to_html(csv_filename, output_folder):
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{link_text}</title>
-<link rel="stylesheet" href="../css/reset.css">
+<link rel="stylesheet" href="../css/style.css">
 </head>
    <body>
    <a href = "#main" class="skip-link">Skip to Main Content</a>
