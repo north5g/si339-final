@@ -32,7 +32,6 @@ def csv_to_html(csv_filename, output_folder):
 <link rel="stylesheet" href="../css/style.css">
 </head>
    <body>
-   <a href = "#main" class="skip-link">Skip to Main Content</a>
    <nav class="main-nav">
      <ul>
         <li><a href="../index.html">Home Page</a></li>

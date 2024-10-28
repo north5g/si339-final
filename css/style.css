@@ -21,11 +21,16 @@ h3 {
 }
 
 a[href="#main"] {
-    display: none;
+    background-color: var(--nav-bg, #99d4d8);
+    font-size: small;
+    color: var(--text-color, #305159);
+    text-align: left;
+    padding: 0;
+    width: 100%;
 }
 
-.skip-link:focus {
-    transform: translateY(0);
+.skip-link a:hover{
+    background-color: var(--nav-hover, #b1e1e4);
 }
 
 /* INDEX */
@@ -90,6 +95,7 @@ a[href="#main"] {
     text-decoration: none;
     color: var(--text-color, #305159);
     padding: 0.5em 0.75em;
+    padding
     font-weight: bold;
     border-radius: 4px;
     text-align: center;
