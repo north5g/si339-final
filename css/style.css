@@ -396,9 +396,6 @@ html {
     }
 }
 @media screen and (min-width: 824px) {
-    .main-nav ul {
-        grid-template-columns: repeat(5, 3fr);
-    }
     .main-nav {
         position: sticky;
         top: 0;
