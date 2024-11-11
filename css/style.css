@@ -259,7 +259,6 @@ table th {
     display: flex;
     justify-content: center;
     gap: 10px;
-    display: hidden;
 }
 
 .carousel-slides {
@@ -423,4 +422,10 @@ html {
     #slide4, #slide5 {
         display: none;
     }
+    
+    .carousel-navigation label[for="slide4"],
+    .carousel-navigation label[for="slide5"] {
+        display: none;
+    }
+    
 }
