@@ -54,6 +54,8 @@
                     <section id="individual-results">
 
                     <h2>Individual Results</h2>
+
+                    <div class="athlete-container">
 <div class="athlete-segment">
 <figure> 
     <img src="../images/profiles/26328690.jpg" width="200" alt="Lucia Llanes"> 
@@ -277,6 +279,7 @@
     </dl>
     </div>
 </div>
+</div>
 </section>
 
         <section id = "gallery">
@@ -296,32 +299,83 @@
         </div>
         <div class="carousel-slides">
         <div class="carousel-slide">
-<img src=../images/meets/235827/IMG_9019.jpg width = "200" alt="">
-<img src=../images/meets/235827/IMG_9036.jpg width = "200" alt="">
-<img src=../images/meets/235827/IMG_20240829_171731303.jpg width = "200" alt="">
+<img src=../images/meets/235827/IMG_9051.jpg width = "200" alt="">
+<img src=../images/meets/235827/IMG_9033.jpg width = "200" alt="">
+<img src=../images/meets/235827/IMG_8974.jpg width = "200" alt="">
 </div>
 <div class="carousel-slide">
 <img src=../images/meets/235827/IMG_9034.jpg width = "200" alt="">
-<img src=../images/meets/235827/IMG_9023.jpg width = "200" alt="">
-<img src=../images/meets/235827/IMG_9045.jpg width = "200" alt="">
-</div>
-<div class="carousel-slide">
-<img src=../images/meets/235827/IMG_20240829_171701146.jpg width = "200" alt="">
-<img src=../images/meets/235827/IMG_9038.jpg width = "200" alt="">
+<img src=../images/meets/235827/IMG_20240829_171709091.jpg width = "200" alt="">
 <img src=../images/meets/235827/IMG_9022.jpg width = "200" alt="">
 </div>
 <div class="carousel-slide">
-<img src=../images/meets/235827/IMG_8974.jpg width = "200" alt="">
-<img src=../images/meets/235827/IMG_9032.jpg width = "200" alt="">
-<img src=../images/meets/235827/IMG_9051.jpg width = "200" alt="">
+<img src=../images/meets/235827/IMG_9026.jpg width = "200" alt="">
+<img src=../images/meets/235827/IMG_9018.jpg width = "200" alt="">
+<img src=../images/meets/235827/IMG_9050.jpg width = "200" alt="">
+</div>
+<div class="carousel-slide">
+<img src=../images/meets/235827/IMG_8973.jpg width = "200" alt="">
+<img src=../images/meets/235827/IMG_9043.jpg width = "200" alt="">
+<img src=../images/meets/235827/IMG_20240829_171731303.jpg width = "200" alt="">
 </div>
 <div class="carousel-slide">
 <img src=../images/meets/235827/IMG_9049.jpg width = "200" alt="">
-<img src=../images/meets/235827/IMG_8973.jpg width = "200" alt="">
-<img src=../images/meets/235827/IMG_9030.jpg width = "200" alt="">
+<img src=../images/meets/235827/IMG_20240829_171701146.jpg width = "200" alt="">
+<img src=../images/meets/235827/IMG_9032.jpg width = "200" alt="">
 </div>
 
    </section>
    </main>   
+   <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const slides = document.querySelectorAll(".carousel input[type='radio']");
+        const carouselSlides = document.querySelector(".carousel-slides");
+        let interval;
+        let currentIndex = 0;
+        const intervalTime = 5000; // Change slide every 5 seconds
+
+        function getTotalSlides() {
+            return window.innerWidth >= 1024 ? 3 : 5;
+        }
+
+        function updateSlidePosition() {
+            const totalSlides = getTotalSlides();
+            carouselSlides.style.transform = `translateX(-${(currentIndex * 100) / totalSlides}%)`;
+        }
+
+        function showNextSlide() {
+            slides[currentIndex].checked = false; // Uncheck current radio button
+            currentIndex = (currentIndex + 1) % getTotalSlides(); // Move to next slide
+            slides[currentIndex].checked = true; // Check the new radio button
+            updateSlidePosition();
+        }
+
+        function startInterval() {
+            interval = setInterval(showNextSlide, intervalTime);
+        }
+
+        function resetInterval() {
+            clearInterval(interval);
+            startInterval();
+        }
+
+        // Initialize the interval for the first time
+        startInterval();
+
+        // Update currentIndex and reset interval when a radio button is clicked
+        slides.forEach((slide, index) => {
+            slide.addEventListener("click", function () {
+                currentIndex = index;
+                updateSlidePosition();
+                resetInterval();
+            });
+        });
+
+        // Adjust slide layout when resizing the window
+        window.addEventListener("resize", function () {
+            updateSlidePosition();
+        });
+    });
+</script>
         </body>
 </html>

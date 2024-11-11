@@ -81,7 +81,8 @@ def csv_to_html(csv_filename, output_folder):
                     html_content += "</table>\n"
                     html_content += """</section>\n
                     <section id="individual-results">\n
-                    <h2>Individual Results</h2>"""
+                    <h2>Individual Results</h2>\n
+                    <div class="athlete-container">"""
 
                 place = row[0]
                 grade = row[1]
@@ -110,7 +111,7 @@ def csv_to_html(csv_filename, output_folder):
 </div>
 """
 
-        html_content += """</section>\n
+        html_content += """</div>\n</section>\n
         <section id = "gallery">
         <h2>Gallery</h2>
         <div class="carousel">
@@ -134,6 +135,57 @@ def csv_to_html(csv_filename, output_folder):
         html_content += """
    </section>
    </main>   
+   <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const slides = document.querySelectorAll(".carousel input[type='radio']");
+        const carouselSlides = document.querySelector(".carousel-slides");
+        let interval;
+        let currentIndex = 0;
+        const intervalTime = 5000; // Change slide every 5 seconds
+
+        function getTotalSlides() {
+            return window.innerWidth >= 1024 ? 3 : 5;
+        }
+
+        function updateSlidePosition() {
+            const totalSlides = getTotalSlides();
+            carouselSlides.style.transform = `translateX(-${(currentIndex * 100) / totalSlides}%)`;
+        }
+
+        function showNextSlide() {
+            slides[currentIndex].checked = false; // Uncheck current radio button
+            currentIndex = (currentIndex + 1) % getTotalSlides(); // Move to next slide
+            slides[currentIndex].checked = true; // Check the new radio button
+            updateSlidePosition();
+        }
+
+        function startInterval() {
+            interval = setInterval(showNextSlide, intervalTime);
+        }
+
+        function resetInterval() {
+            clearInterval(interval);
+            startInterval();
+        }
+
+        // Initialize the interval for the first time
+        startInterval();
+
+        // Update currentIndex and reset interval when a radio button is clicked
+        slides.forEach((slide, index) => {
+            slide.addEventListener("click", function () {
+                currentIndex = index;
+                updateSlidePosition();
+                resetInterval();
+            });
+        });
+
+        // Adjust slide layout when resizing the window
+        window.addEventListener("resize", function () {
+            updateSlidePosition();
+        });
+    });
+</script>
         </body>
 </html>
 """
