@@ -259,7 +259,7 @@ table th {
     display: flex;
     justify-content: center;
     gap: 10px;
-    display: none;
+    display: hidden;
 }
 
 .carousel-slides {
