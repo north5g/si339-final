@@ -143,6 +143,9 @@ def csv_to_html(csv_filename, output_folder):
         let currentIndex = 0;
         const intervalTime = 5000; // Change slide every 5 seconds
 
+        // Check if 'prefers-reduced-motion' is enabled
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
         function getTotalSlides() {
             return window.innerWidth >= 1024 ? 3 : 5;
         }
@@ -160,7 +163,10 @@ def csv_to_html(csv_filename, output_folder):
         }
 
         function startInterval() {
-            interval = setInterval(showNextSlide, intervalTime);
+            // Only start the interval if reduced motion is not preferred
+            if (!prefersReducedMotion) {
+                interval = setInterval(showNextSlide, intervalTime);
+            }
         }
 
         function resetInterval() {

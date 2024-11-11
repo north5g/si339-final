@@ -336,47 +336,6 @@ html {
     scroll-behavior: smooth;
 }
 
-
-
-@media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after {
-        animation: none !important;
-        transition: none !important;
-    }
-
-    .carousel-slides {
-        animation: none;
-    }
-
-    .athlete-segment img:hover {
-        transform: none;
-    }
-
-    .carousel-slide img:hover {
-        transform:none;
-    }
-
-    .meets-list li:hover {
-        transform: none;
-    }
-
-    .carousel-slides {
-        animation: none;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
-    }
-
-    .carousel-slide {
-        display: block;
-        width: 100%;
-    }
-
-    .carousel-slide img {
-        width: 100%;
-    }
-}
-
 @media screen and (min-width: 700px) {
     .main-nav ul {
         grid-template-columns: repeat(5, 3fr);
@@ -423,6 +382,26 @@ html {
     .carousel-navigation label[for="slide4"],
     .carousel-navigation label[for="slide5"] {
         display: none;
+    }
+    
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+
+    .athlete-segment img:hover {
+        transform: none;
+    }
+
+    .carousel-slide img:hover {
+        transform:none;
+    }
+
+    .meets-list li:hover {
+        transform: none;
     }
     
 }
